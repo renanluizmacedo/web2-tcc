@@ -53,7 +53,6 @@ class ClientePolicy
      */
     public function update(User $user, Cliente $cliente)
     {
-        //
     }
 
     /**

@@ -18,10 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('templates.middleware');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('/clientes', '\App\Http\Controllers\ClienteController')->middleware(['auth']);
+Route::resource('/clientes', '\App\Http\Controllers\ClienteController')
+    ->middleware(['auth']);
 
 require __DIR__.'/auth.php';
-
